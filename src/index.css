@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #100d0e;
+  --color-burgundy: #2b0f18;
+  --color-gold: #d4af70;
+  --color-ivory: #f8f0e7;
+  --color-rose: #a66b78;
+  --color-muted: #c6b8bc;
+  --color-panel: #1c1417;
+  --color-line: #49313c;
+  --font-display: "Georgia", "Times New Roman", serif;
+  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: var(--font-sans);
+  background: #100d0e;
+  color: #f8f0e7;
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  color: #100d0e;
+  background: #d4af70;
+}
+
+.section-wrap {
+  width: min(1160px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.section-pad {
+  padding-block: 96px;
+}
+
+.eyebrow {
+  color: #d4af70;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 4vw, 3.25rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.section-copy {
+  max-width: 650px;
+  color: #c6b8bc;
+  line-height: 1.85;
+}
+
+.gold-rule {
+  height: 1px;
+  width: 72px;
+  background: #d4af70;
+}
+
+.luxury-card {
+  border: 1px solid rgba(212, 175, 112, 0.22);
+  background: linear-gradient(
+    145deg,
+    rgba(43, 15, 24, 0.7),
+    rgba(28, 20, 23, 0.96)
+  );
+}
+
+.luxury-focus:focus-visible {
+  outline: 2px solid #d4af70;
+  outline-offset: 4px;
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border: 1px solid #d4af70;
+  border-radius: 999px;
+  background: #d4af70;
+  color: #100d0e;
+  padding: 0.9rem 1.35rem;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  background: #e5c88f;
+  box-shadow: 0 10px 28px rgba(212, 175, 112, 0.14);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border: 1px solid rgba(248, 240, 231, 0.38);
+  border-radius: 999px;
+  color: #f8f0e7;
+  padding: 0.9rem 1.35rem;
+  font-weight: 600;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: #d4af70;
+  color: #d4af70;
+  background: rgba(212, 175, 112, 0.06);
+}
+
+.form-control {
+  width: 100%;
+  border: 1px solid #49313c;
+  border-radius: 0.75rem;
+  background: #171114;
+  color: #f8f0e7;
+  padding: 0.85rem 1rem;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-control::placeholder {
+  color: #a99a9f;
+}
+
+.form-control:focus {
+  border-color: #d4af70;
+  box-shadow: 0 0 0 3px rgba(212, 175, 112, 0.13);
+}
+
+.form-control:focus-visible {
+  outline: 2px solid transparent;
+}
+
+.form-control option {
+  background: #171114;
+  color: #f8f0e7;
+}
+
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: #d4af70;
+  color: #100d0e;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.hero-shade {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(16, 13, 14, 0.8) 0%,
+      rgba(16, 13, 14, 0.45) 48%,
+      rgba(16, 13, 14, 0.08) 100%
+    ),
+    linear-gradient(0deg, rgba(16, 13, 14, 0.18), transparent 60%);
+}
+
+@media (max-width: 640px) {
+  .section-wrap {
+    width: min(100% - 36px, 1160px);
+  }
+
+  .section-pad {
+    padding-block: 68px;
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(90deg, rgba(16, 13, 14, 0.9), rgba(16, 13, 14, 0.64)),
+      linear-gradient(0deg, rgba(16, 13, 14, 0.45), transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
