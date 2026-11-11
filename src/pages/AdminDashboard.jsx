@@ -11,7 +11,7 @@ import {
   X,
 } from "lucide-react";
 
-const API_URL = "http://localhost:3000";
+const API_URL = "https://pooja-boutique-backend-z2se.onrender.com";
 
 export default function AdminDashboard() {
   const navigate = useNavigate();

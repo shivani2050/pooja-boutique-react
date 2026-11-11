@@ -40,7 +40,7 @@ The project does not invent or include boutique photos. If a gallery photo is mi
 ## API configuration
 `.env.example` documents `VITE_API_BASE_URL`. Copy it to `.env` and use:
 ```env
-VITE_API_BASE_URL=http://localhost:3000
+VITE_API_BASE_URL=https://pooja-boutique-backend-z2se.onrender.com
 ```
 Vite environment variables prefixed with `VITE_` are visible in the browser. Never put database credentials, JWT secrets, or other private secrets in them.
 
